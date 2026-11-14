@@ -36,7 +36,7 @@ nav a:hover, .text-link:hover { color: #86513e; }
 .hero-copy { padding-bottom: 20px; }
 .eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; color: var(--green); font-size: .77rem; font-weight: 700; letter-spacing: .11em; }
 .rule { display: inline-block; width: 25px; height: 1px; background: currentColor; }
-h1 { font-size: clamp(3.15rem, 6.5vw, 6.3rem); line-height: 1.11; letter-spacing: -.09em; font-weight: 700; }
+h1 { font-size: clamp(2.9rem, 5.9vw, 5.75rem); line-height: 1.11; letter-spacing: -.09em; font-weight: 700; }
 h1 em { color: var(--green); font-style: normal; }
 .hero-intro { margin-top: 30px; color: var(--quiet); font-size: clamp(.95rem, 1.28vw, 1.1rem); line-height: 1.9; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; column-gap: 24px; row-gap: 14px; margin-top: 35px; }
@@ -45,7 +45,6 @@ h1 em { color: var(--green); font-style: normal; }
 .text-link { display: inline-flex; align-items: center; gap: 9px; width: fit-content; border-bottom: 1px solid #9aa191; padding-block: 2px; color: var(--green); font-size: .85rem; }
 .cover { min-width: 0; }
 .cover-art { width: 100%; background: #c2c1ab; }
-.cover figcaption { display: flex; justify-content: space-between; gap: 8px; margin-top: 12px; color: var(--quiet); font-size: .74rem; }
 
 .about { border-block: 1px solid #dfe1d5; background: #edefe6; }
 .about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: end; padding-block: 80px; }
@@ -91,7 +90,7 @@ details p { margin: 0 24px 17px 0; color: var(--quiet); font-size: .92rem; }
   .hero, .about-inner, .interview-inner { grid-template-columns: 1fr; }
   .hero { gap: 34px; padding-block: 48px 58px; }
   .hero-copy { padding-bottom: 0; }
-  h1 { font-size: clamp(3rem, 10vw, 5rem); }
+  h1 { font-size: clamp(2.75rem, 9.2vw, 4.6rem); }
   .hero-intro { margin-top: 22px; }
   .hero-actions { margin-top: 24px; }
   .about-inner, .interview-inner { padding-block: 58px; gap: 23px; }
