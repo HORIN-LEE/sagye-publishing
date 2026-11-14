@@ -23,8 +23,9 @@ section[id] { scroll-margin-top: 24px; }
 .skip { position: fixed; z-index: 3; top: 12px; left: 12px; padding: 8px 14px; background: white; transform: translateY(-160%); }
 .skip:focus { transform: translateY(0); }
 
-.site-header { min-height: 92px; display: flex; justify-content: space-between; align-items: center; gap: 22px; border-bottom: 1px solid var(--line); }
-.brand { display: block; flex: 0 0 auto; width: 153px; }
+.site-header { min-height: 100px; display: flex; justify-content: space-between; align-items: center; gap: 22px; border-bottom: 1px solid var(--line); }
+.brand { display: block; flex: 0 0 auto; }
+.site-header .brand { width: clamp(200px, 20vw, 248px); }
 .brand img { width: 100%; }
 nav { display: flex; align-items: center; gap: clamp(24px, 3vw, 46px); font-size: .88rem; }
 nav a { white-space: nowrap; }
@@ -43,9 +44,7 @@ h1 em { color: var(--green); font-style: normal; }
 .button:hover { background: #273629; }
 .text-link { display: inline-flex; align-items: center; gap: 9px; width: fit-content; border-bottom: 1px solid #9aa191; padding-block: 2px; color: var(--green); font-size: .85rem; }
 .cover { min-width: 0; }
-.cover-art { position: relative; container-type: inline-size; background: #c2c1ab; }
-.cover-art img { width: 100%; }
-.cover-title { position: absolute; top: 22%; left: 30%; color: #333a2f; font: 700 clamp(.8rem, 5cqi, 2.15rem)/1.21 var(--serif); letter-spacing: -.07em; transform: rotate(-10.5deg); }
+.cover-art { width: 100%; background: #c2c1ab; }
 .cover figcaption { display: flex; justify-content: space-between; gap: 8px; margin-top: 12px; color: var(--quiet); font-size: .74rem; }
 
 .about { border-block: 1px solid #dfe1d5; background: #edefe6; }
@@ -85,10 +84,10 @@ details p { margin: 0 24px 17px 0; color: var(--quiet); font-size: .92rem; }
 
 @media (max-width: 760px) {
   .layout { width: calc(100% - 44px); }
-  .site-header { min-height: 75px; }
+  .site-header { min-height: 82px; gap: 14px; }
   nav { gap: 16px; }
   .nav-cta { gap: 5px; padding-inline: 8px; }
-  .brand { width: 115px; }
+  .site-header .brand { width: clamp(144px, 35vw, 188px); }
   .hero, .about-inner, .interview-inner { grid-template-columns: 1fr; }
   .hero { gap: 34px; padding-block: 48px 58px; }
   .hero-copy { padding-bottom: 0; }
@@ -100,10 +99,13 @@ details p { margin: 0 24px 17px 0; color: var(--quiet); font-size: .92rem; }
   .seasons { grid-template-columns: repeat(2, 1fr); margin-top: 29px; }
 }
 
-@media (max-width: 375px) {
-  .site-header { gap: 9px; }
-  .site-header .brand { width: 94px; }
+@media (max-width: 420px) {
+  .site-header { display: grid; justify-content: start; gap: 8px; padding-block: 12px; }
+  .site-header .brand { width: 169px; }
   nav { gap: 9px; font-size: .8rem; }
+}
+
+@media (max-width: 375px) {
   .hero-intro br { display: none; }
   .season { padding-inline: 12px; }
 }
