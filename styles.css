@@ -1,0 +1,113 @@
+:root {
+  color-scheme: light;
+  --paper: #f8f6f0;
+  --ink: #252b23;
+  --quiet: #50564a;
+  --green: #344635;
+  --line: #d8d9cf;
+  --serif: 'Nanum Myeongjo', 'Batang', 'AppleMyungjo', 'Noto Serif CJK KR', serif;
+  --sans: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans CJK KR', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.75 var(--sans); word-break: keep-all; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #9a583e; outline-offset: 5px; }
+h1, h2, h3, p, figure { margin: 0; }
+h1, h2, h3 { font-family: var(--serif); }
+h2 { font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1.29; letter-spacing: -.076em; }
+section[id] { scroll-margin-top: 24px; }
+.layout { width: min(100% - 112px, 1280px); margin-inline: auto; }
+.skip { position: fixed; z-index: 3; top: 12px; left: 12px; padding: 8px 14px; background: white; transform: translateY(-160%); }
+.skip:focus { transform: translateY(0); }
+
+.site-header { min-height: 92px; display: flex; justify-content: space-between; align-items: center; gap: 22px; border-bottom: 1px solid var(--line); }
+.brand { display: block; flex: 0 0 auto; width: 153px; }
+.brand img { width: 100%; }
+nav { display: flex; align-items: center; gap: clamp(24px, 3vw, 46px); font-size: .88rem; }
+nav a { white-space: nowrap; }
+nav a:hover, .text-link:hover { color: #86513e; }
+.nav-cta { display: inline-flex; gap: 16px; padding: 6px 13px 7px; border: 1px solid #bdc3b7; }
+
+.hero { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(35px, 6vw, 98px); align-items: center; padding-block: 75px 92px; }
+.hero-copy { padding-bottom: 20px; }
+.eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; color: var(--green); font-size: .77rem; font-weight: 700; letter-spacing: .11em; }
+.rule { display: inline-block; width: 25px; height: 1px; background: currentColor; }
+h1 { font-size: clamp(3.15rem, 6.5vw, 6.3rem); line-height: 1.11; letter-spacing: -.09em; font-weight: 700; }
+h1 em { color: var(--green); font-style: normal; }
+.hero-intro { margin-top: 30px; color: var(--quiet); font-size: clamp(.95rem, 1.28vw, 1.1rem); line-height: 1.9; }
+.hero-actions { display: flex; align-items: center; flex-wrap: wrap; column-gap: 24px; row-gap: 14px; margin-top: 35px; }
+.button { display: inline-flex; align-items: center; gap: 23px; padding: 12px 17px; background: var(--green); color: white; font-size: .87rem; }
+.button:hover { background: #273629; }
+.text-link { display: inline-flex; align-items: center; gap: 9px; width: fit-content; border-bottom: 1px solid #9aa191; padding-block: 2px; color: var(--green); font-size: .85rem; }
+.cover { min-width: 0; }
+.cover-art { position: relative; container-type: inline-size; background: #c2c1ab; }
+.cover-art img { width: 100%; }
+.cover-title { position: absolute; top: 22%; left: 30%; color: #333a2f; font: 700 clamp(.8rem, 5cqi, 2.15rem)/1.21 var(--serif); letter-spacing: -.07em; transform: rotate(-10.5deg); }
+.cover figcaption { display: flex; justify-content: space-between; gap: 8px; margin-top: 12px; color: var(--quiet); font-size: .74rem; }
+
+.about { border-block: 1px solid #dfe1d5; background: #edefe6; }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; align-items: end; padding-block: 80px; }
+.about-copy { max-width: 490px; color: var(--quiet); }
+.about-copy p + p { margin-top: 14px; }
+.book { padding-block: 95px; }
+.book-intro { max-width: 650px; margin-top: 20px; color: var(--quiet); }
+.seasons { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 44px; }
+.season { min-height: 157px; padding: 20px 18px 24px; background: var(--tint); border-top: 2px solid var(--accent); }
+.season span { color: var(--quiet); font-size: .65rem; letter-spacing: .14em; }
+.season h3 { margin-top: 5px; font-size: 2rem; line-height: 1.35; }
+.season p { margin-top: 7px; color: var(--quiet); font-size: .83rem; }
+.spring { --tint: #e8ede2; --accent: #839479; }
+.summer { --tint: #e2ebea; --accent: #6e8b8c; }
+.autumn { --tint: #f1e7dd; --accent: #b08369; }
+.winter { --tint: #eae7ef; --accent: #8f849f; }
+
+.interview { background: #e9ece3; border-block: 1px solid #dbdfd3; }
+.interview-inner { display: grid; grid-template-columns: .94fr 1.06fr; gap: clamp(30px, 7vw, 110px); padding-block: 81px; }
+.interview-intro { max-width: 340px; margin-top: 20px; color: var(--quiet); }
+.interview-status { width: fit-content; margin-top: 18px; font-size: .83rem; color: var(--green); }
+.questions { align-self: center; border-top: 1px solid #c6ccbe; }
+details { border-bottom: 1px solid #c6ccbe; }
+summary { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 61px; padding: 12px 0; cursor: pointer; font-weight: 700; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; flex-shrink: 0; color: var(--green); font: 1.35rem var(--sans); }
+details[open] summary::after { content: '−'; }
+details p { margin: 0 24px 17px 0; color: var(--quiet); font-size: .92rem; }
+.site-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding-block: 28px; }
+.site-footer .brand { width: 130px; }
+
+@media (max-width: 1000px) {
+  .layout { width: calc(100% - 72px); }
+  .hero { padding-block: 60px 76px; }
+}
+
+@media (max-width: 760px) {
+  .layout { width: calc(100% - 44px); }
+  .site-header { min-height: 75px; }
+  nav { gap: 16px; }
+  .nav-cta { gap: 5px; padding-inline: 8px; }
+  .brand { width: 115px; }
+  .hero, .about-inner, .interview-inner { grid-template-columns: 1fr; }
+  .hero { gap: 34px; padding-block: 48px 58px; }
+  .hero-copy { padding-bottom: 0; }
+  h1 { font-size: clamp(3rem, 10vw, 5rem); }
+  .hero-intro { margin-top: 22px; }
+  .hero-actions { margin-top: 24px; }
+  .about-inner, .interview-inner { padding-block: 58px; gap: 23px; }
+  .book { padding-block: 58px; }
+  .seasons { grid-template-columns: repeat(2, 1fr); margin-top: 29px; }
+}
+
+@media (max-width: 375px) {
+  .site-header { gap: 9px; }
+  .site-header .brand { width: 94px; }
+  nav { gap: 9px; font-size: .8rem; }
+  .hero-intro br { display: none; }
+  .season { padding-inline: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
